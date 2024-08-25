@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalProductPrice = products.reduce(
       (total, { price }) => total + price,
       0
-    );
+    ).toFixed(2);
 
     DOMSelectors.totalProducts.textContent = totalProductCount;
     DOMSelectors.totalPrice.textContent = totalProductPrice;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const createProductMarkup = ({ name, price }, index) => `
       <li>
-        <p class="product-name">${name} (${price} AZN)</p>
+        <p class="product-name">${name} (${price.toFixed(2)} AZN)</p>
         <button class="remove-btn" data-index="${index}">Sil</button>
       </li>
     `;
