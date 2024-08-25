@@ -96,3 +96,14 @@ button:hover {
 .summary p {
     color: #65B351;
 }
+
+
+@media (max-width: 600px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .product-container .summary .total-products, .total-price {
+        font-size: 14px;
+    }
+}
